@@ -1,0 +1,74 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "ovly.extended",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}"
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": []
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"dependencies": {
+			"minUI5Version": "1.60.1"
+		},
+		"extends": {
+			"component": "ovly.extensible",
+			"extensions": {
+				"sap.ui.viewModifications": {
+					"ovly.extensible.view.S2": {
+						"editButton": {
+							"visible": false
+						}
+					}
+				},
+				"sap.ui.viewExtensions": {
+					"ovly.extensible.view.S2": {
+						"extFooter": {
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "ovly.extended.view.S2_extFooterCustom",
+							"type": "XML"
+						},
+						"extContentAfterHeader": {
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "ovly.extended.view.S2_extContentAfterHeaderCustom",
+							"type": "XML"
+						}
+					},
+					"ovly.extensible.view.S1": {
+						"extListItemAttibutes": {
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "ovly.extended.view.S1_extListItemAttibutesCustom",
+							"type": "XML"
+						}
+					}
+				},
+				"sap.ui.controllerExtensions": {
+					"ovly.extensible.controller.S2": {
+						"controllerName": "ovly.extended.controller.S2Custom"
+					}
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	}
+}

@@ -1,0 +1,87 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/sap/",
+      "target": {
+        "type": "destination",
+        "name": "OVLY_S4",
+        "entryPath": "/sap/"
+      },
+      "description": "OVLY - S4 1809"
+    },
+    {
+      "path": "/webapp/parent",
+      "target": {
+        "type": "application",
+        "preferLocal": true,
+        "name": "ui5extensibleapp"
+      },
+      "description": "Original Application"
+    },
+    {
+      "path": "/webapp/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/webapp/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/dist/parent",
+      "target": {
+        "type": "application",
+        "preferLocal": true,
+        "name": "ui5extensibleapp"
+      },
+      "description": "Original Application"
+    },
+    {
+      "path": "/dist/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/dist/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    }
+  ],
+  "sendWelcomeFileRedirect": true
+}
